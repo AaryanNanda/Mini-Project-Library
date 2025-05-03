@@ -1,0 +1,216 @@
+.view-projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+}
+
+.page-description {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    margin: 80px 0 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+}
+
+.page-description h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 220px;
+    perspective: 1000px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.project-card:hover .project-card-inner {
+    transform: rotateY(180deg);
+}
+
+.project-card-front,
+.project-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.project-card-front {
+    background-color: white;
+    color: #2c3e50;
+    border: 1px solid #eaeaea;
+}
+
+.project-card-back {
+    background-color: #2c3e50;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.project-card h3 {
+    margin: 0 0 15px;
+    color: #3498db;
+    font-size: 1.2rem;
+}
+
+.project-card p {
+    margin: 8px 0;
+    font-size: 0.95rem;
+}
+
+.add-project-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 100;
+    transition: background-color 0.3s;
+}
+
+.add-project-button:hover {
+    background-color: #2980b9;
+}
+
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #7f8c8d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 100;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #95a5a6;
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .page-description {
+        margin-top: 100px;
+    }
+    
+    .add-project-button, 
+    .back-button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+
+
+/* Add these to your existing ViewProjects.css */
+.projects-grid {
+    animation: gridEntry 0.6s ease-out;
+  }
+  
+  @keyframes gridEntry {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .project-card {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+  
+
+  /* ViewProjects.css */
+.view-projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    background-color: #ffffff;
+    min-height: 100vh;
+  }
+  
+  /* Rest of your existing ViewProjects.css styles... */
+  .page-description {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 80px 0 30px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .page-description h2 {
+    color: #343a40;
+    margin-bottom: 15px;
+  }
+  
+  .page-description p {
+    color: #495057;
+    line-height: 1.6;
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .project-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 200px;
+    perspective: 1000px;
+  }
+  

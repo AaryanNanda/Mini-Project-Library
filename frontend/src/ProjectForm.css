@@ -1,0 +1,210 @@
+/* ProjectForm.css */
+
+/* Body styles when form is active */
+body.project-form-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('/public/MINI PROJRCT-ADD.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  background-color: #f5f5f5; /* Fallback color */
+}
+
+/* Main form container */
+.form-container {
+  margin: 20px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 500px;
+  background-color: rgba(255, 255, 255, 0.95);
+  position: relative;
+  z-index: 1;
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Form header */
+.form-container h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+}
+
+/* Form group styling */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #34495e;
+  font-size: 0.95rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+  background-color: #fff;
+}
+
+/* Submit button */
+button[type="submit"] {
+  background-color: #27ae60;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #219653;
+  transform: translateY(-2px);
+}
+
+button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+/* Submission success message */
+.submission-message {
+  text-align: center;
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.submission-message h2 {
+  color: #27ae60;
+  margin-bottom: 20px;
+}
+
+.submission-message p {
+  margin: 15px 0;
+  text-align: left;
+  color: #333;
+}
+
+.submission-message a {
+  color: #2980b9;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.submission-message a:hover {
+  text-decoration: underline;
+}
+
+/* Back button */
+.back-button {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.back-button:hover {
+  background-color: #5a6268;
+  transform: translateX(-3px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  body.project-form-page {
+    padding: 10px;
+  }
+  
+  .form-container {
+    padding: 25px 20px;
+    margin: 10px;
+  }
+  
+  .form-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .form-group input {
+    padding: 10px 12px;
+    font-size: 15px;
+  }
+  
+  button[type="submit"] {
+    padding: 10px 15px;
+    font-size: 15px;
+  }
+  
+  .back-button {
+    top: 10px;
+    left: 10px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  body.project-form-page {
+    background: none;
+  }
+  
+  .form-container {
+    box-shadow: none;
+    background: transparent;
+    max-width: 100%;
+  }
+  
+  .back-button {
+    display: none;
+  }
+}
