@@ -4,7 +4,7 @@ import ProjectForm from './ProjectForm';
 import ViewProjects from './ViewProjects';
 import './App.css';
 
-function App() {
+function AddProject() {
     return (
         <Router>
             <Routes>
@@ -22,4 +22,4 @@ function App() {
     );
 }
 
-export default App;
+export default AddProject;
